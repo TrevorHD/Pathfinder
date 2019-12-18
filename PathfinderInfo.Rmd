@@ -9,6 +9,10 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+\newpage
+\tableofcontents
+\newpage
+
 # Overview
 
 This document provides information on the pathfinding algorithms used in this project, specifically addressing how the algorithms work as well as evaluating their advantages and disadvantages.
