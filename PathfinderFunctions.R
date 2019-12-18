@@ -206,4 +206,3 @@ ahead <- function(i){
 plot.path <- function(colour, linetype){
   grid.segments(x0 = x.old, x1 = x.new, y0 = y.old, y1 = y.new, 
                 gp = gpar(lwd = 5, col = colour, lty = linetype))}
-

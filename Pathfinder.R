@@ -25,7 +25,7 @@ source("https://raw.githubusercontent.com/TrevorHD/Pathfinder/master/PathfinderF
 # Should simulations be replicated many times in order to test effectiveness?
 # Setting to TRUE will run many simulations and will plot performance stats
 # Setting to FALSE will only run one simulation, but will plot paths travelled
-replicate.on <- TRUE
+replicate.on <- FALSE
 
 # Generate terrain
 field <- terrain()
@@ -34,7 +34,7 @@ field <- terrain()
 if(replicate.on == FALSE){
   
   # Prepare graphics device
-  jpeg(filename = "test.jpeg", width = 2000, height = 2000, units = "px")
+  jpeg(filename = "PathPlots.jpeg", width = 2000, height = 2000, units = "px")
   
   # Create blank page
   grid.newpage()
@@ -67,7 +67,7 @@ if(replicate.on == FALSE){
 if(replicate.on == FALSE){
   
   # Run all four algorithms
-  source("D:\\Projects/Ongoing/Pathfinder/PathfinderAlgorithms.R")}
+  source("https://raw.githubusercontent.com/TrevorHD/Pathfinder/master/PathfinderAlgorithms.R")}
 
 # Run algorithms many times to compare effectiveness
 # Be patient, as this may take a while...
