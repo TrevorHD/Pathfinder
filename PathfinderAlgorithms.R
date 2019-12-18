@@ -34,7 +34,7 @@ while(n.col != 50 || n.row != 50){
     update()}
   
   # Plot path on terrain map given colour and line type
-  if(plot.on == TRUE){
+  if(replicate.on == FALSE){
     plot.path("black", 1)}}
 
 # Store total resistance for comparison against other algorithms
@@ -61,7 +61,7 @@ while(n.col != 50 || n.row != 50){
   choices <- calc.choices()
   
   # For both choices, compute total resistance for 3 forward neighbour cells
-  choices <- cbind(choices, sapply(1:nrow(choices), nn.1))
+  choices <- cbind(choices, sapply(1:nrow(choices), nn))
   
   # Label choices for easier selection
   names(choices) <- c("x", "y", "r", "nn")
@@ -93,7 +93,7 @@ while(n.col != 50 || n.row != 50){
     update()}
   
   # Plot path on terrain map given colour and line type
-  if(plot.on == TRUE){
+  if(replicate.on == FALSE){
     plot.path("red", 6)}}
 
 # Store total resistance for comparison against other algorithms
@@ -152,7 +152,7 @@ while(n.col != 50 || n.row != 50){
     update()}
   
   # Plot path on terrain map given colour and line type
-  if(plot.on == TRUE){
+  if(replicate.on == FALSE){
     plot.path("yellow", 2)}}
 
 # Store total resistance for comparison against other algorithms
@@ -214,7 +214,7 @@ while(n.col != 50 || n.row != 50){
     update()}
   
   # Plot path on terrain map given colour and line type
-  if(plot.on == TRUE){
+  if(replicate.on == FALSE){
     plot.path("forestgreen", 3)}}
 
 # Store total resistance for comparison against other algorithms

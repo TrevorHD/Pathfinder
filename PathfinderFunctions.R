@@ -110,7 +110,7 @@ calc.choices <- function(){
 ##### FNSR Calculations -----------------------------------------------------------------------------------
 
 # Function that, for each choice, computes total resistance for 3 forward neighbour cells
-nn.1 <- function(i){
+nn <- function(i){
   
   # Select the ith choice
   ch.col <- choices[i, 1]
