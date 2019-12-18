@@ -111,6 +111,22 @@ if(replicate.on == FALSE){
 
   # Plot the beginning and end points
   grid.points(x = c(0.0215, 0.9770), y = c(0.0215, 0.9770), pch = 19, gp = gpar(cex = 2))
+  
+  # Add legend for lines
+  legend(x = -0.02, y = 1.02, col = c("black", "red", "yellow", "forestgreen"), 
+         lwd = rep(4, 4), lty = c(1, 6, 2, 3), cex = 3, box.lwd = 2,
+         legend = c("1", "2", "3", "4"), title = "  Algorithm ", title.adj = 0.4, bg = "white")
+  
+  # Add legend for cells
+  legend(x = -0.02, y = 0.87, cex = 3.045, box.lwd = 2, title.adj = 0.5,
+         fill = c(rgb(r = 236, g = 240, b = 255, maxColorValue = 255),
+                  rgb(r = 220, g = 228, b = 255, maxColorValue = 255),
+                  rgb(r = 193, g = 206, b = 255, maxColorValue = 255),
+                  rgb(r = 155, g = 175, b = 255, maxColorValue = 255),
+                  rgb(r = 115, g = 143, b = 255, maxColorValue = 255),
+                  rgb(r = 58,  g = 88,  b = 209, maxColorValue = 255),
+                  rgb(r = 27,  g = 46,  b = 124, maxColorValue = 255)), 
+         legend = c("1", "5", "10", "20", "50", "100" ,"1000"), title = "Resistance", bg = "white")
 
   # Deactivate grid layout; finalise graphics save
   popViewport()
