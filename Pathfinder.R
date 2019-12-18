@@ -25,7 +25,7 @@ source("https://raw.githubusercontent.com/TrevorHD/Pathfinder/master/PathfinderF
 # Should simulations be replicated many times in order to test effectiveness?
 # Setting to TRUE will run many simulations and will plot performance stats
 # Setting to FALSE will only run one simulation, but will plot paths travelled
-replicate.on <- FALSE
+replicate.on <- TRUE
 
 # Generate terrain
 field <- terrain()
@@ -171,9 +171,9 @@ if(replicate.on == TRUE){
   title(xlab = "Algorithm", line = 3)
   title(ylab = "Path Resistance", line = 3)
   for(i in 1:4){
-    segments(x0 = i - 0.4, x1 = i + 0.4, y0 = mean(get(paste0("tracker.a", i))), 
+    segments(x0 = i - 0.392, x1 = i + 0.4, y0 = mean(get(paste0("tracker.a", i))), 
              y1 = mean(get(paste0("tracker.a", i))), col = c("black", "red", "yellow", "forestgreen")[i], 
-             lty = 3, lwd = 4)}
+             lty = 3, lwd = 3)}
   popViewport()
 
   # Number of wins for each algorithm
@@ -189,6 +189,13 @@ if(replicate.on == TRUE){
   title(ylab = "Proportion of Simulations Won", line = 3)
   box()
   popViewport()
+  
+  # Add subtitle text
+  grid.text(label = c("Distribution of total path resistance over 5000 simulations.",
+                      "Distribution of total path resistance over 5000 simulations.",
+                      "Proportion of 5000 simulations won by each algorithm."), 
+            x = c(0.185, 0.505, 0.83), y = rep(0.93, 3), just = "centre",
+            gp = gpar(fontsize = 20, col = "black", fontface = "italic"))
 
   # Deactivate grid layout; finalise graphics save
   popViewport()
