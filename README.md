@@ -15,3 +15,7 @@ This project compares different pathfinding methods in order to see which one ca
 **PathfinderInfo** *(.Rmd)* - R Markdown used to create a detailed description of what this project is.
 
 **PathfinderInfo** *(.pdf)* - A more detailed description of what this project is and how it works.
+
+**PathPlots** *(.jpeg)* - An example of a terrain map, along with paths that the four algorithms took for a single simulation.
+
+**AlgorithmPerformance** *(.jpeg)* - Statistics on the performance of the four algorithms over 5000 simulations. Two plots (a density plot and a boxplot) show distribution of path resistances, and a barplot shows the proportion of simulations that each algorithm won (i.e. had the lowest path resistance). The dashed lines in the boxplot represent the mean path resistance.
