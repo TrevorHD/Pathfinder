@@ -28,6 +28,8 @@ This project compares different pathfinding methods in order to see which one ca
 
 **PathfinderInfo** *(.pdf)* - A more detailed description of what this project is and how it works.
 
+**Header** *(.tex)* A TeX file with header specifications.
+
 <br/><br/>
 
 ![](https://github.com/TrevorHD/Pathfinder/blob/master/Figures/PathPlots.jpeg)
