@@ -1,6 +1,6 @@
 # Overview
 
-This project compares different pathfinding methods in order to see which one can most effectively navigate through a randomly-generated terrain map. Each terrain map is a 50 x 50 grid of cells with various "resistance" values, and the goal is to find the path of least resistance between opposite corners of the grid. For now, pathfinding is limited only to movement in the forward direction; the ability to move backward will be the goal of future work.
+A comparison of different pathfinding algorithms in order to see which one can most effectively navigate through a randomly-generated terrain map. Each terrain map is a 50 x 50 grid of cells with various "resistance" values, and the goal is to find the path of least resistance between opposite corners of the grid. For now, pathfinding is limited only to movement in the forward direction; the ability to move backward as well will be considered for future work.
 
 <br/>
 
@@ -16,6 +16,8 @@ This project compares different pathfinding methods in order to see which one ca
 
 **PathfinderGridDisplay** *(.R)* - A rework of the `heatmap` function in the base R `stats` package, which changes the y-axis from the right side of the grid to the left. This code has not been cleaned up for clarity since it is not my own work, but rather an adaptation of the `heatmap` source code.
 
+**PathfinderInfo** *(.Rmd)* - R Markdown used to create a detailed description of what this project is.
+
 ## Figures
 
 **PathPlots** *(.jpeg)* - An example of a terrain map, along with paths that the four algorithms took for a single simulation.
@@ -24,14 +26,16 @@ This project compares different pathfinding methods in order to see which one ca
 
 ## Other
 
-**PathfinderInfo** *(.Rmd)* - R Markdown used to create a detailed description of what this project is.
-
 **PathfinderInfo** *(.pdf)* - A more detailed description of what this project is and how it works.
 
 **Header** *(.tex)* A TeX file with header specifications.
 
-<br/><br/>
+<br/>
 
-![](https://github.com/TrevorHD/Pathfinder/blob/master/Figures/PathPlots.jpeg)
+# Featured Images
 
-![](https://github.com/TrevorHD/Pathfinder/blob/master/Figures/AlgorithmPerformance.jpeg)
+Noteworthy or interesting plots, images, figures, and other graphical outputs from the code are included below.
+
+<kbd>![](https://github.com/TrevorHD/Pathfinder/blob/master/Figures/PathPlots.jpeg)</kbd>
+
+<kbd>![](https://github.com/TrevorHD/Pathfinder/blob/master/Figures/AlgorithmPerformance.jpeg)</kbd>
