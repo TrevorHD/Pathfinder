@@ -34,8 +34,10 @@ A comparison of different pathfinding algorithms in order to see which one can m
 
 # Featured Images
 
-Noteworthy or interesting plots, images, figures, and other graphical outputs from the code are included below.
+An example of pathfinding through a randomly-grnerated terrain map. Darker colours indicate high-resistance cells that incur larger penalties for any path drawn through them.
 
 <kbd>![](https://github.com/TrevorHD/Pathfinder/blob/master/Figures/PathPlots.jpeg)</kbd>
+
+A summary of algorithm performance resulting from 5000 simulations. The fourth algorithm only narrowly outperforms the first one in terms of mean path resistance, but this is enough to give it a significant competitive advantage overall; the fourth algorithm won in more than 75% of all simulations!
 
 <kbd>![](https://github.com/TrevorHD/Pathfinder/blob/master/Figures/AlgorithmPerformance.jpeg)</kbd>
