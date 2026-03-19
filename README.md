@@ -1,6 +1,6 @@
 # Overview
 
-A comparison of different pathfinding algorithms in order to see which one can most effectively navigate through a randomly-generated terrain map. Each terrain map is a 50 x 50 grid of cells with various "resistance" values, and the goal is to find the path of least resistance between opposite corners of the grid. For now, pathfinding is limited only to movement in the forward direction; the ability to move backward as well will be considered for future work.
+A case study examining several from-scratch implementations of different pathfinding algorithms in order to see which one can most effectively navigate through randomly-generated terrain maps. Each terrain map is a 50 x 50 grid of cells with various "resistance" values, and the goal is to find the path of least resistance between opposite corners of the grid.
 
 <br/>
 
@@ -8,27 +8,27 @@ A comparison of different pathfinding algorithms in order to see which one can m
 
 ## Scripts
 
-**Pathfinder** *(.R)* - The main script that controls execution and plotting of pathfinding events.
+**Header** *(.tex)* - Markdown with header specifications for the report.
 
-**PathfinderAlgorithms** *(.R)* - The four algorithms used to navigate through the terrain map.
+**HMFix** *(.R)* - Script for reworking the `heatmap` function in the base R `stats` package to switch axis positioning. This code has not been cleaned up for clarity since it is not my own work, but rather an adaptation of the `heatmap` source code.
 
-**PathfinderFunctions** *(.R)* - Various functions essential to the functioning of the program; examples include terrain generation, setting initial conditions, advancing each turn, and setting up subroutines for the algorithms.
+**PF1** *(.R)* - Script for defining key functions involved in generating terrain, setting initial conditions, advancing each turn, and setting up algorithm subroutines.
 
-**PathfinderGridDisplay** *(.R)* - A rework of the `heatmap` function in the base R `stats` package, which changes the y-axis from the right side of the grid to the left. This code has not been cleaned up for clarity since it is not my own work, but rather an adaptation of the `heatmap` source code.
+**PF2** *(.R)* - Script for defining the algorithms used to navigate through the terrain map.
 
-**PathfinderInfo** *(.Rmd)* - R Markdown used to create a detailed description of what this project is.
+**PF3** *(.R)* - Script for controlling algorithm execution and plotting pathfinding events.
+
+**PF4** *(.Rmd)* - Script for generating figures and rendering output to PDF.
 
 ## Figures
 
-**PathPlots** *(.jpeg)* - An example of a terrain map, along with paths that the four algorithms took for a single simulation.
+**PFPlots1** *(.jpeg)* - Plots showing a sample terrain map, along with paths that the four algorithms took for a single simulation.
 
-**AlgorithmPerformance** *(.jpeg)* - Statistics on the performance of the four algorithms over 5000 simulations. Two plots (a density plot and a boxplot) show distribution of path resistances, and a barplot shows the proportion of simulations that each algorithm won (i.e. had the lowest path resistance). The dashed lines in the boxplot represent the mean path resistance.
+**PFPlots2** *(.jpeg)* - Plots showing relative algorithm performance.
 
-## Other
+## Writeups
 
-**PathfinderInfo** *(.pdf)* - A more detailed description of what this project is and how it works.
-
-**Header** *(.tex)* A TeX file with header specifications.
+**Pathfinder** *(.pdf)* - Report for the case study.
 
 <br/>
 
@@ -36,8 +36,8 @@ A comparison of different pathfinding algorithms in order to see which one can m
 
 An example of pathfinding through a randomly-grnerated terrain map. Darker colours indicate high-resistance cells that incur larger penalties for any path drawn through them.
 
-<kbd>![](https://github.com/TrevorHD/Pathfinder/blob/master/Figures/PathPlots.jpeg)</kbd>
+<kbd>![](https://github.com/TrevorHD/Pathfinder/blob/master/Figures/PFPlots1.jpeg)</kbd>
 
-A summary of algorithm performance resulting from 5000 simulations. The fourth algorithm narrowly outperforms the first one in terms of mean path resistance, but this is enough to give it a significant competitive advantage overall; the fourth algorithm won in more than 75% of all simulations!
+A summary of algorithm performance resulting from 5000 simulations. The fourth algorithm narrowly outperforms the first one in terms of mean path resistance, but this is enough to give it a significant competitive advantage overall; the fourth algorithm won in more than 75% of all simulations.
 
-<kbd>![](https://github.com/TrevorHD/Pathfinder/blob/master/Figures/AlgorithmPerformance.jpeg)</kbd>
+<kbd>![](https://github.com/TrevorHD/Pathfinder/blob/master/Figures/PFPlots2.jpeg)</kbd>
