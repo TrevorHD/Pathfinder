@@ -563,7 +563,7 @@ Now, we examine algorithm performance on randomly-generated terrain to see which
 
 ```{r echo = FALSE, out.width = "470px", out.height = "470px"}
 
-knitr::include_graphics("Figures/PathPlots.jpeg")
+knitr::include_graphics("Figures/PFPlots1.jpeg")
 
 ```
 
@@ -573,7 +573,7 @@ However, we note that the results above are from just a single run of the four a
 
 ```{r echo = FALSE, out.width = "470px", out.height = "470px"}
 
-knitr::include_graphics("Figures/AlgorithmPerformance.jpeg")
+knitr::include_graphics("Figures/PFPlots2.jpeg")
 
 ```
 
