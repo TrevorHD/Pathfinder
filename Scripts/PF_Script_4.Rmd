@@ -5,7 +5,7 @@ author: "Trevor H. Drees"
 output:
   pdf_document:
     toc: true
-  in_header: "Header.tex"
+  in_header: "PF_Script_Header.tex"
 header-includes:
   - \usepackage{titling}
   - \renewcommand{\and}{\\}
@@ -15,6 +15,10 @@ urlcolor: blue
 
 ```{r setup, include = FALSE}
 
+# Set working directory
+setwd("~/GitHub/Pathfinder")
+
+# Set chunk options
 knitr::opts_chunk$set(echo = TRUE)
 
 ```

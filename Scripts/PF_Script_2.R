@@ -219,3 +219,4 @@ while(n.col != 50 || n.row != 50){
 
 # Store total resistance for comparison against other algorithms
 a4.r <- r.total
+

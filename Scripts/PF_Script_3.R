@@ -1,8 +1,12 @@
-##### Load packages ---------------------------------------------------------------------------------------
+##### Prepare workspace -----------------------------------------------------------------------------------
 
+# Load libraries
 library(grid)
 library(gridBase)
 library(tidyverse)
+
+# Set working directory
+setwd("~/GitHub/Pathfinder")
 
 
 
@@ -11,10 +15,10 @@ library(tidyverse)
 ##### Initialise sub-routines and other functions ---------------------------------------------------------
 
 # Load new heatmap function
-source("https://raw.githubusercontent.com/TrevorHD/Pathfinder/master/Scripts/HMFix.R")
+source("Scripts/PF_Script_HMFix.R")
 
 # Load pathfinder functions and sub-routines
-source("https://raw.githubusercontent.com/TrevorHD/Pathfinder/master/Scripts/PF1.R")
+source("Scripts/PF_Script_1.R")
 
 
 
@@ -34,7 +38,7 @@ field <- terrain()
 if(replicate.on == FALSE){
   
   # Prepare graphics device
-  jpeg(filename = "Figures/PFPlots1.jpeg", width = 2000, height = 2000, units = "px")
+  jpeg(filename = "Figures/PF_Plots_1.jpeg", width = 2000, height = 2000, units = "px")
   
   # Create blank page
   grid.newpage()
@@ -67,7 +71,7 @@ if(replicate.on == FALSE){
 if(replicate.on == FALSE){
   
   # Run all four algorithms
-  source("https://raw.githubusercontent.com/TrevorHD/Pathfinder/master/Scripts/PF2.R")}
+  source("Scripts/PF_Script_2.R")}
 
 # Run algorithms many times to compare effectiveness
 # Be patient, as this may take a while...
@@ -87,7 +91,7 @@ if(replicate.on == TRUE){
     field <- terrain()
     
     # Run all four algorithms
-    source("https://raw.githubusercontent.com/TrevorHD/Pathfinder/master/Scripts/PF2.R")
+    source("Scripts/PF_Script_2.R")
       
     # Choose the "winner" as the algorithm with the lowest resistance
     num <- which.min(c(a1.r, a2.r, a3.r, a4.r))
@@ -142,7 +146,7 @@ if(replicate.on == FALSE){
 if(replicate.on == TRUE){
 
   # Prepare graphics device
-  jpeg(filename = "Figures/PFPlots2.jpeg", width = 2150, height = 700, units = "px")
+  jpeg(filename = "Figures/PF_Plots_2.jpeg", width = 2150, height = 700, units = "px")
 
   # Create blank page
   grid.newpage()
@@ -200,3 +204,4 @@ if(replicate.on == TRUE){
   # Deactivate grid layout; finalise graphics save
   popViewport()
   dev.off()}
+
